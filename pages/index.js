@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main data-theme="lemonade">
-
+        <h1>I am Upoma</h1>
       </main>
     </>
   )
