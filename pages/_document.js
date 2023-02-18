@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html data-theme="emerald" lang="en">
+    <Html data-theme="fantasy" lang="en">
       <Head />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <body >
