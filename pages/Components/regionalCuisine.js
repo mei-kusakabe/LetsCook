@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import AnimatedText from 'react-animated-text-content';
 import { ImEye } from 'react-icons/im';
 import { AiFillLike } from 'react-icons/ai';
-import { motion} from "framer-motion"
 
 const RegionalCuisine = () => {
     const [cuisines, setCuisines] = useState([]);

@@ -5,7 +5,7 @@ import RegionalCuisine from './Components/regionalCuisine';
 
 const HomePage = () => {
     return (
-        <div>
+        <div className='bg-white'>
             <NavBar></NavBar>
             <Banner></Banner>
             <RegionalCuisine></RegionalCuisine>
