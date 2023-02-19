@@ -4,8 +4,9 @@ import AnimatedText from 'react-animated-text-content';
 import NavBar from './Components/navBar';
 import { MdDateRange } from 'react-icons/md';
 import { ImEye } from 'react-icons/im';
+import Link from 'next/link';
 
-const blog = () => {
+const Blog = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
         fetch('blog.json')
@@ -66,7 +67,12 @@ const blog = () => {
                                             '>{blog?.date}</span></p>
                                             <p className='flex justify-between items-center '><ImEye className='text-accent font-bold text-2xl'></ImEye><span className='ml-2 text-lime-700
                                             '>{blog?.views}</span></p>
-                                            <button className="btn btn-accent btn-sm text-white">View More</button>
+                                            <Link href={`/blogs/${blog.id}`}><button
+                                                className="btn btn-accent btn-sm text-white"
+                                                
+                                            >
+                                                View More
+                                            </button></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -86,8 +92,8 @@ const blog = () => {
                                 <div key={blog.id}>
                                     <div className='border-b flex items-center py-6 flex-col lg:flex-row'>
                                         <img src={blog.img} alt="" className='w-full md:w-24 lg:w-24 h-full md:h-24 lg:h-24  cursor-pointer ease-in-out duration-500 hover:scale-125' />
-                                        <button className="text-xl text-center md:text-left lg:text-left ml-3 font-semibold text-lime-700 cursor-pointer ease-out-in duration-500 hover:scale-75">
-                                            {blog.title}</button>
+                                        <Link href={`/blogs/${blog.id}`}><button className="text-xl text-center md:text-left lg:text-left ml-3 font-semibold text-lime-700 cursor-pointer ease-out-in duration-500 hover:scale-75">
+                                            {blog.title}</button></Link>
                                     </div>
                                 </div>
 
@@ -101,4 +107,4 @@ const blog = () => {
     );
 };
 
-export default blog;
+export default Blog;
